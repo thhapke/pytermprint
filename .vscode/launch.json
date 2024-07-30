@@ -15,8 +15,11 @@
             "name": "termprint test",
             "type": "debugpy",
             "request": "launch",
-            "program": "src/termprint/main.py",
-            "console": "integratedTerminal"
+            "program": "${workspaceFolder}/src/termprint/print_examples.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            }
         }
 
     ]

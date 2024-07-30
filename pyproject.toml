@@ -4,10 +4,10 @@ build-backend = "hatchling.build"
 
 [project]
 name = "termprint"
-version = "0.0.2"
+version = "0.0.4"
 description = ''
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.10"
 license = "MIT"
 keywords = []
 authors = [
@@ -21,12 +21,16 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = []
+dependencies = [
+]
 
 [project.urls]
-Documentation = "https://github.com/unknown/termprint#readme"
-Issues = "https://github.com/unknown/termprint/issues"
-Source = "https://github.com/unknown/termprint"
+Documentation = "https://github.com/thhapke/termprint#readme"
+Issues = "https://github.com/thhapke/pytermprint/issues"
+Source = "https://github.com/thhapke/pytermprint"
+
+[project.scripts]
+print-examples = "termprint.print_examples:main"
 
 [tool.hatch.version]
 path = "src/termprint/__about__.py"
@@ -35,6 +39,7 @@ path = "src/termprint/__about__.py"
 dependencies = [
   "coverage[toml]>=6.5",
   "pytest",
+  "rich"
 ]
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
@@ -49,7 +54,7 @@ cov = [
 ]
 
 [[tool.hatch.envs.all.matrix]]
-python = ["3.7", "3.8", "3.9", "3.10", "3.11"]
+python = ["3.10", "3.11"]
 
 [tool.hatch.envs.lint]
 detached = true

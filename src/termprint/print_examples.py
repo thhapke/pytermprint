@@ -1,8 +1,8 @@
-import sys
+
 from rich import print as rprint
 
-sys.path.append('..')
-import termprint as tp
+from termprint import print as tp
+
 
 def main():
     tp.title('Basic colors')
