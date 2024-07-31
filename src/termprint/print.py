@@ -26,7 +26,7 @@ COLOR_SCHEMES = {
                     'rgb(209,239,255)', 'rgb(209,239,255)']
     },
     '256colors': {
-        'info': 'color(87)',
+        'info': 'color(27)',
         'title': 'bold color(27)',
         'header': 'italic color(27)',
         'line': 'color(27)',
